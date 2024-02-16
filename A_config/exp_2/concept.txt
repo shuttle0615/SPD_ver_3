@@ -1,0 +1,9 @@
+from exp_1 and baseline, best lr was 6.25e-6 and 4.5e-6. we use 4.5e-6 and 1.0e-5
+
+we add lr scheduler, as loss starts to be very unstable as epoch increases.
+i understood this effect as problem too large learning rate, roamming around minima.
+
+starting with just small lr was too slow for convergence, and seemed trapped in local minima too easily
+thus by having lr scheduler, we check how stability of loss function changes -> size of loss oscilaration must decrease.
+
+result: nothing really happend... 

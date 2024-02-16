@@ -1,0 +1,1 @@
+increased the epoch to check the long effect of low learning rate. Over fitting, and best validation loss

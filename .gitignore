@@ -1,0 +1,11 @@
+# ignore all Database
+
+/E_database/
+
+# ignore all results
+
+/F_results/
+
+# ignore all lightning_logs
+
+/lightning_logs/

@@ -1,0 +1,8 @@
+on last experiment, we tested effect of repeated example to overfitting problem of the model. 
+
+now we test if size of the model affect the underfitting of the model. (we only change the number of head and hidden layer size - twice) 
+
+from last experiment, we noticed that by matching number of expected sample value to not overlapping, the over fitting was very improved. 
+so for now, we will sattle with this data setup, where we use 100000 data points with 40 coins
+
+we change lr to find best fit

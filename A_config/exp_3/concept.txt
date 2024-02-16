@@ -1,0 +1,5 @@
+by increasing the size of the dataset, i'm expecting overfitting, compared to the things before. 
+
+we will use similar learning rate of 4.5e-6
+
+testing section was too bullish, so made them to include both increase and decrease turn.

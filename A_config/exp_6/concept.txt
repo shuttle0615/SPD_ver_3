@@ -1,0 +1,3 @@
+Now we test the impact of sliding window and forward window to the performance of the model. 
+
+Also, given our dataset, we need to find the best model size which does not overfit, so increase in the size of the model is also important. 

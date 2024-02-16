@@ -1,0 +1,12 @@
+we similarly increase the size of the training set, but we sample them from different places: 
+
+increase the number of coin species to use...so from each coin, loader samples similar amount, but total size of training set increase.
+expecting under fitting than over fitting. 
+
+From exp3, we notcied that decreaseing data size yield to better performance, and showed less evidence of overfitting. 
+
+we will see that this is effect of "decreased usage of similar example - so over fitting is resolved" or "appropriate data size for this size of model - under fitting is resolved"
+
+also we need to check "using different way to choose from logit" 
+
+we used different epochs to match the testing times. (lowest val_loss only saved...)
