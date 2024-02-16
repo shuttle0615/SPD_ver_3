@@ -1,7 +1,7 @@
 ---
 
 path:
-  root: /home/kyuholee/SPD_ver_3
+  root: /content/drive/MyDrive/Auto_trading/SPD_ver_3
   db: ${path.root}/E_database
   config_path: ${path.root}/A_config
   result_path: ${path.root}/F_results

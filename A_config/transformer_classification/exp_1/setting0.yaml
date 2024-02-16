@@ -7,10 +7,10 @@ coin_number: 10
 commission_fee: 0.001
 epoch: 30
 forward: 5
-lr: 7.5e-06
+lr: 6.0e-06
 model: transformer
-name: exp_1
-num: 3
+name: transformer_classification/exp_1
+num: 0
 quantile: 0.85
 scheduler: null
 sliding: 1

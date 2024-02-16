@@ -56,13 +56,13 @@ class stockDataModule(pl.LightningDataModule):
         self.test = StockDataset(self.df_test, self.df_test_idx, self.test_r_value, self.alpha)
         
     def train_dataloader(self):
-        return DataLoader(self.train, batch_size=self.config.batch, num_workers=18, sampler=ImbalancedDatasetSampler(self.train, labels=self.train.label))
+        return DataLoader(self.train, batch_size=self.config.batch, num_workers=6, sampler=ImbalancedDatasetSampler(self.train, labels=self.train.label))
     
     def val_dataloader(self):
-        return DataLoader(self.val, batch_size=self.config.batch, num_workers=18, sampler=ImbalancedDatasetSampler(self.val, labels=self.val.label))
+        return DataLoader(self.val, batch_size=self.config.batch, num_workers=6, sampler=ImbalancedDatasetSampler(self.val, labels=self.val.label))
     
     def test_dataloader(self):
-        return DataLoader(self.test, batch_size=self.config.batch, num_workers=18, sampler=ImbalancedDatasetSampler(self.test, labels=self.test.label))
+        return DataLoader(self.test, batch_size=self.config.batch, num_workers=6, sampler=ImbalancedDatasetSampler(self.test, labels=self.test.label))
     
     def idx_generator(self, coin_ls, config):
         df_ls = []
@@ -129,7 +129,7 @@ class BackTestDataModule(pl.LightningDataModule):
         self.back_test = BackTestDataset(self.df, self.config.backward, self.config.sliding, self.coin)
         
     def predict_dataloader(self):
-        return DataLoader(self.back_test, batch_size=128, num_workers=18) 
+        return DataLoader(self.back_test, batch_size=128, num_workers=6) 
 
         
 class BackTestDataset(Dataset):

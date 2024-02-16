@@ -66,7 +66,7 @@ def db_coin_list(config):
 
 def create_db():
     # load data conifg
-    config = OmegaConf.load('/home/kyuholee/SPD_ver_3/A_config/data_config.yaml')
+    config = OmegaConf.load('/content/drive/MyDrive/Auto_trading/SPD_ver_3/A_config/data_config.yaml')
     
     # get current coin list
     current_coin = current_coin_list()
@@ -77,7 +77,7 @@ def create_db():
 
 def update_db():
     # load data conifg
-    config = OmegaConf.load('/home/kyuholee/SPD_ver_3/A_config/data_config.yaml')
+    config = OmegaConf.load('/content/drive/MyDrive/Auto_trading/SPD_ver_3/A_config/data_config.yaml')
     
     # get current coin list
     current_coin = current_coin_list()
@@ -104,12 +104,15 @@ def update_db():
         Currency(coin, config) 
 
 def sort_coin_by_size():
-    config = OmegaConf.load('/home/kyuholee/SPD_ver_3/A_config/data_config.yaml')
+    config = OmegaConf.load('/content/drive/MyDrive/Auto_trading/SPD_ver_3/A_config/data_config.yaml')
     
     size_ls = [(file.stat().st_size, file.name) for file in os.scandir(config.path.db)]
     size_ls = sorted(size_ls, reverse=True)
     return [coin[1].replace('.pkl', '') for coin in size_ls]
 
 if __name__ == "__main__":
-    create_db()
+    #create_db()
     #update_db()
+    ls = current_coin_list()
+    print(ls)
+    print(len(ls))
